@@ -54,7 +54,7 @@ def migrate_account_escrow_balances(
             vested_balances,
         ).estimateGas()
     )
-    print("Estimate GAS:", estimate_gas, "Actual:", int(estimate_gas + 20000))
+    print("Estimate GAS:", estimate_gas, "Actual:", int(estimate_gas))
     migration_txn = (
         reward_escrow_v2_contract_instance.functions.migrateAccountEscrowBalances(
             accounts,
